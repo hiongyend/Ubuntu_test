@@ -16,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         mBinding.setName(getString(R.string.app_name));
         Log.e("MainActivity", "hello world");
-        System.out.print("hhhh");
+        System.out.println("把print修改为println");
     }
 }
