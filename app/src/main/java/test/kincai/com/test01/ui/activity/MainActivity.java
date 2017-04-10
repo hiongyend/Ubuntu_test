@@ -27,14 +27,12 @@ public class MainActivity extends AppCompatActivity implements IBaseMvpView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        mBinding.setName(getString(R.string.app_name));
-        Log.e("MainActivity", "hello world");
-        System.out.println("把print修改为println");
         initData();
     }
 
     private void initData() {
+		mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        mBinding.setName(getString(R.string.app_name));
         mBinding.setEventListener(new EventListener());
         mMainPresenter = new MainPresenter(this);
         mMainPresenter.attachView(this);
