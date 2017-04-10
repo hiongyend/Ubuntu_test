@@ -15,7 +15,7 @@ import test.kincai.com.test01.presenter.MainPresenter;
 /**
  * author KINCAI
  * .
- * desc TODO
+ * desc 主界面
  * .
  * time 17-4-10-上午9:23
  */
