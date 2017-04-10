@@ -1,11 +1,8 @@
 package test.kincai.com.test01.model;
 
 import android.os.AsyncTask;
-import android.util.Log;
-import android.view.View;
 
 import test.kincai.com.test01.mvp.IBaseLoadListener;
-import test.kincai.com.test01.presenter.MainPresenter;
 
 /**
  * author KINCAI
@@ -15,7 +12,7 @@ import test.kincai.com.test01.presenter.MainPresenter;
  * time 17-4-10-上午9:34
  */
 
-public class MainModel implements MainPresenter.IMainModel {
+public class MainModel implements IMainModel {
     @Override
     public void loadData(final IBaseLoadListener listener) {
         new AsyncTask<Void,Void,Void>() {
@@ -23,7 +20,7 @@ public class MainModel implements MainPresenter.IMainModel {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

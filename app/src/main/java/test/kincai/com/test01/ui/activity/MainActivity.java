@@ -1,8 +1,8 @@
 package test.kincai.com.test01.ui.activity;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements IBaseMvpView {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.e("MainActivity","on destroy");
         if (mMainPresenter != null)
             mMainPresenter.detachView();
     }

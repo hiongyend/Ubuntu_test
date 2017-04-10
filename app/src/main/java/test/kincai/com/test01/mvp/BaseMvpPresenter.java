@@ -27,17 +27,13 @@ public class BaseMvpPresenter<V extends IBaseMvpView> implements IPresenter<V> {
         }
     }
 
-//    public boolean isAttachView(){
-//        return mMvpView != null;
-//    }
-
-    public WeakReference<V> getMvpView() {
-        return mMvpView;
+    private V getMvpView() {
+        if (mMvpView != null)
+            return mMvpView.get();
+        return null;
     }
 
-//    public void checkViewAttach() {
-//        if(!isAttachView()){
-//            throw new NullPointerException("view null");
-//        }
-//    }
+    public boolean isDestroyed() {
+        return getMvpView() == null;
+    }
 }
